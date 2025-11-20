@@ -692,7 +692,7 @@ const Hero: React.FC = () => {
     }),
   };
 
-  const name = "SANKALP R.";
+  const name = "GOVIND C.";
 
   return (
     <section
@@ -747,7 +747,7 @@ const Hero: React.FC = () => {
           {/* Floating badges */}
           <motion.div
             variants={itemVariants}
-            className="flex justify-center gap-4 mb-8"
+            className="flex justify-center gap-2 mb-8"
           >
             <motion.div
               whileHover={!isMobile ? { scale: 1.1, rotate: 5 } : {}}
@@ -758,7 +758,7 @@ const Hero: React.FC = () => {
               }`}
             >
               <Code2 size={14} />
-              <span className="text-xs font-mono">DEVELOPER</span>
+              <span className="text-xs font-mono">Experience Designer</span>
             </motion.div>
             <motion.div
               whileHover={!isMobile ? { scale: 1.1, rotate: -5 } : {}}
@@ -769,7 +769,7 @@ const Hero: React.FC = () => {
               }`}
             >
               <Palette size={14} />
-              <span className="text-xs font-mono">DESIGNER</span>
+              <span className="text-xs font-mono">UX/UI Architect</span>
             </motion.div>
             <motion.div
               whileHover={!isMobile ? { scale: 1.1, rotate: 5 } : {}}
@@ -780,7 +780,7 @@ const Hero: React.FC = () => {
               }`}
             >
               <Sparkles size={14} />
-              <span className="text-xs font-mono">CREATOR</span>
+              <span className="text-xs font-mono">Product Designer</span>
             </motion.div>
           </motion.div>
 
@@ -846,7 +846,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 3, repeat: Infinity }}
               className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
             >
-              Full Stack Developer
+              UI/UX Designer
             </motion.span>
             <span
               className={`mx-4 md:mx-6 ${
@@ -887,7 +887,7 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() =>
                 document
-                  .querySelector("#projects")
+                  .querySelector("#experience")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               className={`group px-8 py-4 relative overflow-hidden rounded-full transition-all duration-300 ${
@@ -925,7 +925,7 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => {
                 window.open(
-                  "https://docs.google.com/document/d/e/2PACX-1vS_Yi7fnhhari1vyFacM0uxb7tMvoeB4h9A21owhgzmJd891Wxi1G27mxZz9t7nMzdMHeyf_tJMknn3/pub",
+                  "https://www.canva.com/design/DAG5QBfaGKg/OUXBqCmNIwu4UwYcGNF8Fg/edit?utm_content=DAG5QBfaGKg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
                   "_blank"
                 );
               }}
@@ -949,20 +949,14 @@ const Hero: React.FC = () => {
           >
             {[
               {
-                icon: Github,
-                href: "https://github.com/sankalp-OO7",
-                label: "GitHub",
-                color: "#6e5494",
-              },
-              {
                 icon: Linkedin,
-                href: "https://linkedin.com/in/sankalp-racchewar",
+                href: "https://linkedin.com/in/-govind",
                 label: "LinkedIn",
                 color: "#0077b5",
               },
               {
                 icon: Mail,
-                href: "mailto:racchewarsankalp@gmail.com",
+                href: "mailto:chavangovindkn@gmail.com",
                 label: "Email",
                 color: "#ea4335",
               },

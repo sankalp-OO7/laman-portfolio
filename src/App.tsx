@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Certificates from "./components/Certificates";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -27,7 +27,7 @@ const App: FC = () => {
           <Skills />
           <Certificates />
           <Experience />
-          <Projects />
+          {/* <Projects /> */}
           <Contact />
         </main>
         <Footer />

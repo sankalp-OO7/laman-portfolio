@@ -49,15 +49,15 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "racchewarsankalp@gmail.com",
-      href: "mailto:racchewarsankalp@gmail.com",
+      value: "chavangovindkn@gmail.com",
+      href: "mailto:chavangovindkn@gmail.com",
       isExternal: false,
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91-8421822204",
-      href: "tel:+918421822204",
+      value: "+91-9309903680",
+      href: "tel:+919309903680",
       isExternal: false,
     },
     {
@@ -67,18 +67,12 @@ const Contact: React.FC = () => {
       href: null,
       isExternal: false,
     },
-    {
-      icon: Github,
-      title: "GitHub",
-      value: "sankalp-OO7",
-      href: "https://github.com/sankalp-OO7",
-      isExternal: true,
-    },
+
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "sankalp-racchewar",
-      href: "https://linkedin.com/in/sankalp-racchewar/",
+      value: "Govind-Chavan",
+      href: "https://www.linkedin.com/in/-govind/",
       isExternal: true,
     },
   ];

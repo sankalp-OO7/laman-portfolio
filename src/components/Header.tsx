@@ -24,7 +24,7 @@ const Header: React.FC = () => {
     { name: "Skills", href: "#skills" },
     { name: "Certificates", href: "#certificates" },
     { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
+    // { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
             whileHover={!isMobile ? { scale: 1.05 } : {}}
             className="text-2xl font-bold gradient-text"
           >
-            Sankalp Racchewar
+            Govind Patil{" "}
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{
-            opacity: isOpen ? 1 : 0,
+            opacity: isOpen ? 1 : 1,
             height: isOpen ? "auto" : 0,
           }}
           className="md:hidden overflow-hidden"

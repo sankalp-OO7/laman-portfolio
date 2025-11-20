@@ -16,22 +16,21 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/sankalp-OO7", label: "GitHub" },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/sankalp-racchewar",
+      href: "https://linkedin.com/in/-govind/",
       label: "LinkedIn",
     },
-    { icon: Mail, href: "mailto:racchewarsankalp@gmail.com", label: "Email" },
+    { icon: Mail, href: "mailto:chavangovindkn@gmail.com", label: "Email" },
   ];
 
   const contactInfo = [
     {
       icon: Mail,
-      text: "racchewarsankalp@gmail.com",
-      href: "mailto:racchewarsankalp@gmail.com",
+      text: "chavangovindkn@gmail.com",
+      href: "mailto:chavangovindkn@gmail.com",
     },
-    { icon: Phone, text: "+91-8669140442", href: "tel:+918669140442" },
+    { icon: Phone, text: "+91-9309903680", href: "tel:+919309903680" },
     { icon: MapPin, text: "Pune, Maharashtra", href: "#" },
   ];
 
@@ -51,7 +50,7 @@ const Footer: React.FC = () => {
             className="space-y-4"
           >
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Sankalp Racchewar
+              Govind Patil
             </h3>
             <p className="text-gray-400 leading-relaxed">
               Full Stack & Android Developer with hands-on experience in
@@ -147,8 +146,8 @@ const Footer: React.FC = () => {
           className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <p className="text-gray-400 text-sm flex items-center gap-1">
-            Made with <Heart className="text-red-500" size={16} /> by Sankalp
-            Racchewar
+            Made with <Heart className="text-red-500" size={16} /> by Govind
+            Chavan
           </p>
 
           <div className="flex items-center gap-4">

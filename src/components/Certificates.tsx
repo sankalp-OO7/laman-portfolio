@@ -1,89 +1,70 @@
 import { motion } from "framer-motion";
-import { Award, Calendar, Building } from "lucide-react";
+import {
+  Award,
+  GraduationCap,
+  Building,
+  Star,
+  CheckCircle,
+} from "lucide-react";
 
-const Certificates = () => {
-  const certificates = [
+const EducationAndAchievements = () => {
+  // Data points extracted and styled based on the Education section of the resume
+  const academicAchievements = [
     {
-      title: "React – The Complete Guide",
-      issuer: "Udemy",
-      period: "2023",
-      issued: "2023",
-      description:
-        "Comprehensive React.js course covering hooks, context, Redux, and advanced component patterns.",
-      skills: ["React.js", "Redux", "Hooks", "Frontend Development"],
-      icon: "⚛️",
-      category: "Frontend",
-      type: "Certification",
+      title: "Master of Computer Applications (MCA)",
+      issuer: "MES Institute of Management & Career Courses (IMCC)",
+      location: "Pune",
+      period: "Completed",
+      detail:
+        "Outstanding academic performance in advanced computer applications.",
+      achievement: "CGPA: 8.46",
+      icon: "🎓",
+      category: "Postgraduate",
+      type: "Master's Degree",
     },
     {
-      title: "Node.js, Express & MongoDB – The Complete Bootcamp",
-      issuer: "Udemy",
-      period: "2023",
-      issued: "2023",
-      description:
-        "Hands-on training in backend development with Node.js, Express, and MongoDB, including REST APIs and authentication.",
-      skills: ["Node.js", "Express.js", "MongoDB", "REST APIs"],
-      icon: "🟢",
-      category: "Backend",
-      type: "Certification",
+      title: "Bachelor of Computer Application (BCA)",
+      issuer: "MIT College of Computer Science and IT",
+      location: "Vasmat",
+      period: "Completed",
+      detail:
+        "Strong foundational knowledge in computer science and IT principles.",
+      achievement: "CGPA: 9.17",
+      icon: "📚",
+      category: "Undergraduate",
+      type: "Bachelor's Degree",
     },
     {
-      title: "Jest & React Testing Library – Unit & Integration Testing",
-      issuer: "Udemy",
-      period: "2024",
-      issued: "2024",
-      description:
-        "Practical course on writing unit, integration, and snapshot tests for React applications using Jest and RTL.",
-      skills: ["Jest", "Integration Testing", "Test Automation"],
-      icon: "🧪",
-      category: "Testing",
-      type: "Certification",
+      title: "Tripsi - Travel Planning App",
+      issuer: "Academic/Personal Project",
+      location: "Pune, Maharashtra",
+      period: "UI/UX Design Focus",
+      detail:
+        "Designed and delivered high-fidelity wireframes and interactive prototypes for a travel planning mobile app.",
+      achievement: "30% Improvement in User Planning Time",
+      icon: "✈️",
+      category: "Project Highlight",
+      type: "Key Project",
     },
     {
-      title: "AWS Certified Cloud Practitioner",
-      issuer: "Udemy / AWS Training",
-      period: "2024",
-      issued: "2024",
-      description:
-        "Fundamentals of AWS Cloud services, EC2, S3, Lambda, IAM, and CI/CD deployments.",
-      skills: ["AWS", "CI/CD", "Cloud Deployment"],
-      icon: "☁️",
-      category: "Cloud",
-      type: "Certification",
-    },
-    {
-      title: "Symbiosis ELTIS Speakfast – Level B1",
-      issuer: "Symbiosis ELTIS",
-      period: "2021",
-      issued: "2021",
-      description:
-        "English communication certification focusing on professional workplace fluency.",
-      skills: ["English Communication", "Workplace Fluency"],
-      icon: "🗣️",
-      category: "Language",
-      type: "Certification",
-    },
-    {
-      title: "Symbiosis ELTIS Speakfast – Level B2",
-      issuer: "Symbiosis ELTIS",
-      period: "2022",
-      issued: "2022",
-      description:
-        "Advanced English communication certification with focus on presentations and collaboration.",
-      skills: ["Advanced English", "Business Communication"],
-      icon: "📖",
-      category: "Language",
-      type: "Certification",
+      title: "Hindustan Wardrobe - Online Rental",
+      issuer: "Academic/Personal Project",
+      location: "Pune, Maharashtra",
+      period: "UX Research Focus",
+      detail:
+        "Conducted user interviews and competitive analysis, informing a data-driven redesign of the checkout process.",
+      achievement: "Data-Driven Redesign",
+      icon: "💡",
+      category: "Project Highlight",
+      type: "Key Project",
     },
   ];
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      Frontend: "from-blue-500 to-indigo-600",
-      Backend: "from-green-500 to-teal-600",
-      Testing: "from-pink-500 to-red-600",
-      Cloud: "from-purple-500 to-indigo-600",
-      Language: "from-yellow-500 to-orange-600",
+      Postgraduate: "from-purple-500 to-indigo-600",
+      Undergraduate: "from-teal-500 to-cyan-600",
+      "Project Highlight": "from-pink-500 to-orange-600",
     };
     return (
       colors[category as keyof typeof colors] ||
@@ -93,15 +74,19 @@ const Certificates = () => {
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case "Certification":
-        return "🏆";
+      case "Master's Degree":
+        return <GraduationCap size={16} />;
+      case "Bachelor's Degree":
+        return <GraduationCap size={16} />;
+      case "Key Project":
+        return <CheckCircle size={16} />;
       default:
-        return "🎯";
+        return <Star size={16} />;
     }
   };
 
   const staggerContainer = {
-    animate: { transition: { staggerChildren: 0.05 } },
+    animate: { transition: { staggerChildren: 0.07 } },
   };
 
   return (
@@ -110,29 +95,30 @@ const Certificates = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.4 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            Certificates & Training
+            Education & Academic Highlights 🏆
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-purple-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Professional certifications and training programs that strengthened
-            my technical expertise
+            Foundational degrees and key project work demonstrating analytical
+            and design capabilities.
           </p>
         </motion.div>
 
-        {/* Certificates Grid */}
+        {/* Education/Projects Grid */}
         <motion.div
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, margin: "-10%" }}
-          className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto mb-12"
+          className="grid lg:grid-cols-2 xl:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12"
         >
-          {certificates.map((cert, index) => (
+          {academicAchievements.map((item, index) => (
             <motion.div
               key={index}
               variants={{
@@ -143,76 +129,58 @@ const Certificates = () => {
                   transition: { duration: 0.4, ease: "easeOut" },
                 },
               }}
-              className="cert-card bg-white dark:bg-dark-700 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-dark-600"
+              className="achievement-card bg-white dark:bg-dark-700 rounded-2xl shadow-xl overflow-hidden border-t-4 border-purple-500 dark:border-purple-600 transition-shadow duration-300 hover:shadow-2xl"
             >
               {/* Header */}
-              <div className="relative p-6 bg-gradient-to-br from-primary-500/5 to-purple-500/10">
-                <div className="flex items-start gap-3 mb-4">
+              <div className="relative p-6 bg-gradient-to-br from-gray-50 dark:from-dark-700/50 to-purple-50/10 dark:to-dark-800/50">
+                <div className="flex items-start gap-4 mb-4">
                   <div
-                    className={`w-14 h-14 bg-gradient-to-br ${getCategoryColor(
-                      cert.category
+                    className={`w-14 h-14 flex-shrink-0 bg-gradient-to-br ${getCategoryColor(
+                      item.category
                     )} rounded-xl flex items-center justify-center text-2xl shadow-lg`}
                   >
-                    {cert.icon}
+                    {item.icon}
                   </div>
-                  <div>
+                  <div className="flex-grow">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="inline-block px-2 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 text-xs font-semibold rounded-full">
-                        {cert.category}
+                      <span className="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 text-xs font-semibold rounded-full uppercase tracking-wider">
+                        {item.category}
                       </span>
-                      <span className="inline-block px-2 py-1 bg-gray-100 dark:bg-dark-600 text-gray-600 dark:text-gray-400 text-xs font-medium rounded-full">
-                        {getTypeIcon(cert.type)} {cert.type}
+                      <span className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 dark:bg-dark-600 text-gray-600 dark:text-gray-400 text-xs font-medium rounded-full">
+                        {getTypeIcon(item.type)} {item.type}
                       </span>
                     </div>
-                    <h3 className="cert-title text-lg font-bold text-gray-900 dark:text-white leading-tight">
-                      {cert.title}
+                    <h3 className="item-title text-xl font-bold text-gray-900 dark:text-white leading-snug">
+                      {item.title}
                     </h3>
                   </div>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 pt-2">
                   <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                     <Building size={14} />
-                    <span className="font-medium">{cert.issuer}</span>
+                    <span className="font-medium">{item.issuer}</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <Calendar size={14} />
-                    <span>{cert.period}</span>
-                  </div>
-                  <div className="inline-block px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-semibold rounded-full">
-                    Issued: {cert.issued}
+                    <GraduationCap size={14} />
+                    <span>{item.location}</span>
                   </div>
                 </div>
               </div>
 
               {/* Body */}
               <div className="p-6">
-                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed">
-                  {cert.description}
+                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed border-l-2 border-purple-300 pl-3 italic">
+                  {item.detail}
                 </p>
                 <div className="space-y-3">
                   <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wide">
-                    Skills Gained:
+                    Key Achievement:
                   </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {cert.skills.map((skill, skillIndex) => (
-                      <span
-                        key={skill}
-                        className="px-2 py-1 bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 text-primary-700 dark:text-primary-300 rounded-md text-xs font-medium border border-primary-100 dark:border-primary-800"
-                        style={{ animationDelay: `${skillIndex * 0.05}s` }}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Footer */}
-              <div className="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-dark-800 dark:to-dark-700 border-t border-gray-100 dark:border-dark-600 p-4">
-                <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 text-xs font-semibold">
-                  <Award size={14} />
-                  Verified Achievement
+                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-500 to-cyan-600 text-white rounded-lg text-sm font-bold shadow-md shadow-teal-500/50">
+                    <Award size={16} />
+                    {item.achievement}
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -223,4 +191,4 @@ const Certificates = () => {
   );
 };
 
-export default Certificates;
+export default EducationAndAchievements;

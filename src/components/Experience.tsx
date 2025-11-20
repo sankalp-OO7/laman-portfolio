@@ -5,13 +5,13 @@ import {
   Calendar,
   MapPin,
   Briefcase,
-  GraduationCap,
-  Zap,
-  Code2,
+  Layers,
   Star,
+  Figma,
+  Users,
 } from "lucide-react";
 
-const Experience: React.FC = () => {
+const UIUX_Experience: React.FC = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       AOS.init({
@@ -27,98 +27,77 @@ const Experience: React.FC = () => {
     };
   }, []);
 
+  // Professional experience is broken down into project-based milestones
   const experiences = [
     {
-      title: "B.Sc. Computer Science",
-      company: "MIT College, Basmath",
-      location: "Hingoli",
-      period: "2019 – 2022",
+      title: "UI/UX Designer - Foundation & Research",
+      company: "NIMBJA SECURITY SOLUTIONS PRIVATE LIMITED",
+      location: "Pune, Maharashtra",
+      period: "June 2024 – Nov 2025 (1.5 Years total)",
       description:
-        "Built a solid foundation in computer science with strong academic projects. Learned the basics of programming, databases, and software development lifecycle.",
-      technologies: ["C", "C++", "Java", "SQL", "HTML/CSS", "JavaScript"],
-      icon: <GraduationCap className="w-6 h-6" />,
-      type: "education",
-      highlight: "Graduation",
+        "Initiated the design process for a key product, focusing on User Research and Competitive Analysis to define user journeys and identify critical pain points in existing applications. Established design standards for initial projects.",
+      technologies: [
+        "User Interviews",
+        "Competitive Analysis",
+        "User Flows",
+        "Miro",
+        "Jira",
+      ],
+      icon: <Users className="w-6 h-6" />,
+      type: "job",
+      highlight: "UX Strategy & Research",
     },
     {
-      title: "MCA + Fullstack Developer (Trainee)", // New role
-      company: "PES Modern College & Nimbja Security Solution",
-      location: "Pune",
-      period: "2022 – March 2023",
+      title: "Wireframing & Prototyping Lead (Tripsi App)",
+      company: "NIMBJA SECURITY SOLUTIONS PRIVATE LIMITED",
+      location: "Pune, Maharashtra",
+      period: "June 2024 – Nov 2025",
       description:
-        "Pursued MCA while working as a Trainee Developer at Nimbja Security Solution. Gained practical exposure to Full stack projects, enhancing academic learning with real-world applications. Briefly utilized Golang for specific microservices.",
+        "Designed and delivered high-fidelity wireframes and interactive prototypes for the Tripsi - Travel Planning Mobile App. The intuitive design led to a significant 30% improvement in user planning time.",
       technologies: [
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "REST APIs",
-        "PostgreSQL",
-        "Go (Golang)", // Included but deemphasized
+        "Figma",
+        "High-Fidelity Prototyping",
+        "Mobile UI",
+        "Usability Testing",
+      ],
+      icon: <Figma className="w-6 h-6" />,
+      type: "job",
+      highlight: "Key Project Delivery",
+    },
+    {
+      title: "Design System & Collaboration (Hindustan Wardrobe)",
+      company: "NIMBJA SECURITY SOLUTIONS PRIVATE LIMITED",
+      location: "Pune, Maharashtra",
+      period: "June 2024 – Nov 2025",
+      description:
+        "Collaborated with a cross-functional team to implement a component-based Design System, which successfully reduced the design-to-development time by 20%. Also redesigned the online rental platform checkout process.",
+      technologies: [
+        "Design Systems",
+        "Figma Dev Mode",
+        "Agile/Scrum",
+        "Dev Collaboration",
+        "Visual Design",
+      ],
+      icon: <Layers className="w-6 h-6" />,
+      type: "current",
+      highlight: "System Implementation",
+    },
+    {
+      title: "Data Visualization & Advanced UI (Smart Capital)",
+      company: "NIMBJA SECURITY SOLUTIONS PRIVATE LIMITED",
+      location: "Pune, Maharashtra",
+      period: "June 2024 – Nov 2025",
+      description:
+        "Created a responsive web dashboard for a stock market analytics platform (Smart Capital). Focused on optimizing data visualization and visual hierarchy for clarity, quick insights, and accessibility.",
+      technologies: [
+        "Data Visualization",
+        "Responsive Design",
+        "Accessibility",
+        "Information Architecture",
       ],
       icon: <Star className="w-6 h-6" />,
-      type: "education",
-      highlight: "Masters + First Role",
-    },
-    {
-      title: "Associate Fullstack Developer", // New role
-      company: "Nimbja Security Solution",
-      location: "Pune",
-      period: "March 2023 – 2024",
-      description:
-        "Started full-time as an Associate Developer, focusing on full-stack product development using the Full stack. Delivered reusable React components, integrated APIs, and optimized backend services.",
-      technologies: [
-        "React.js",
-        "Redux",
-        "TypeScript",
-        "Express.js",
-        "MySQL",
-        "Docker",
-      ],
-      icon: <Briefcase className="w-6 h-6" />,
       type: "job",
-      highlight: "Full-Time Role",
-    },
-    {
-      title: "Fullstack Developer", // New role
-      company: "Nimbja Security Solution",
-      location: "Pune",
-      period: "2024 – 2025",
-      description:
-        "Promoted to Fullstack Developer, contributing to large-scale projects including an AI-driven Police Management System. Implemented scalable **MERN** backend APIs, cloud deployment, and CI/CD pipelines. Used Go for limited performance-critical tasks.",
-      technologies: [
-        "Node.js",
-        "MongoDB",
-        "AWS",
-        "CI/CD",
-        "Jest",
-        "Payment Gateway Integration",
-        "Firebase",
-        "Go (Golang)", // Included but deemphasized
-      ],
-      icon: <Code2 className="w-6 h-6" />,
-      type: "job",
-      highlight: "Major Projects",
-    },
-    {
-      title: "Current Role – Fullstack Development", // New role
-      company: "Nimbja Security Solution",
-      location: "Pune",
-      period: "2025 – Present",
-      description:
-        "Currently leading development on AI-powered modules and enterprise-grade web applications. Building secure, scalable MERN apps with cloud infrastructure and advanced testing. Full stack  remains the core focus.",
-      technologies: [
-        "React.js",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
-        "AWS",
-        "CI/CD",
-        "AI Integrations",
-      ],
-      icon: <Zap className="w-6 h-6" />,
-      type: "current",
-      highlight: "Present",
+      highlight: "Advanced Dashboard UI",
     },
   ];
 
@@ -132,27 +111,27 @@ const Experience: React.FC = () => {
         <div className="text-center mb-20">
           <h2
             data-aos="fade-up"
-            className="text-4xl md:text-6xl font-bold mb-6 gradient-text"
+            className="text-4xl md:text-5xl font-bold mb-6 gradient-text"
           >
-            My Career Timeline
+            Professional UX Journey
           </h2>
           <div
             data-aos="scale-in"
-            className="w-32 h-2 bg-gradient-to-r from-primary-500 via-purple-500 to-primary-600 mx-auto mb-8 rounded-full shadow-lg"
+            className="w-32 h-2 bg-gradient-to-r from-purple-500 via-teal-500 to-purple-600 mx-auto mb-8 rounded-full shadow-lg"
           ></div>
           <p
             data-aos="fade-up"
             data-aos-delay="200"
             className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            From academics to professional development and advanced AI-powered
-            projects
+            1.5 years of impactful experience in UI/UX design, broken down by
+            key project milestones and achievements.
           </p>
         </div>
 
         <div className="relative max-w-6xl mx-auto">
           {/* Main Line */}
-          <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-500 via-purple-500 to-purple-600 rounded-full shadow-lg"></div>
+          <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-teal-500 to-purple-600 rounded-full shadow-lg"></div>
 
           {experiences.map((exp, index) => (
             <div key={index} className="relative mb-16 last:mb-0">
@@ -163,14 +142,12 @@ const Experience: React.FC = () => {
                     w-full h-full rounded-full border-4 border-white dark:border-dark-700 shadow-xl flex items-center justify-center
                     ${
                       exp.type === "current"
-                        ? "bg-gradient-to-br from-primary-500 to-primary-600 animate-pulse"
-                        : exp.type === "job"
-                        ? "bg-gradient-to-br from-purple-500 to-purple-600"
-                        : "bg-gradient-to-br from-green-500 to-green-600"
+                        ? "bg-gradient-to-br from-teal-500 to-teal-600 animate-pulse"
+                        : "bg-gradient-to-br from-purple-500 to-purple-600"
                     }
                   `}
                 >
-                  <div className="text-white text-xs font-bold">
+                  <div className="text-white text-sm font-bold">
                     {index + 1}
                   </div>
                 </div>
@@ -189,22 +166,20 @@ const Experience: React.FC = () => {
                 <div
                   className={`
                     bg-white dark:bg-dark-700 rounded-2xl shadow-2xl overflow-hidden group
-                    transform transition-all duration-500 hover:scale-105 hover:rotate-1 border-2
+                    transform transition-all duration-500 hover:scale-[1.03] hover:shadow-purple-500/30 border-2
                     ${
                       exp.type === "current"
-                        ? "border-primary-200 dark:border-primary-800"
-                        : exp.type === "job"
-                        ? "border-purple-200 dark:border-purple-800"
-                        : "border-green-200 dark:border-green-800"
+                        ? "border-teal-400/50 dark:border-teal-800"
+                        : "border-purple-200 dark:border-purple-800"
                     }
                   `}
                 >
                   <div className="p-6 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-dark-800 dark:to-dark-700">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="p-4 rounded-xl shadow-lg bg-gradient-to-br from-primary-500 to-primary-600 transform group-hover:rotate-12 transition-transform duration-300">
+                      <div className="p-4 rounded-xl shadow-lg bg-gradient-to-br from-purple-500 to-teal-500 transform group-hover:-translate-y-1 transition-transform duration-300">
                         <div className="text-white">{exp.icon}</div>
                       </div>
-                      <div className="px-3 py-1 rounded-full text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                      <div className="px-3 py-1 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300">
                         {exp.highlight}
                       </div>
                     </div>
@@ -212,7 +187,7 @@ const Experience: React.FC = () => {
                       {exp.title}
                     </h3>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400 mb-4">
-                      <div className="flex items-center gap-2 font-semibold text-primary-600 dark:text-primary-400">
+                      <div className="flex items-center gap-2 font-semibold text-purple-600 dark:text-purple-400">
                         <Briefcase size={16} />
                         {exp.company}
                       </div>
@@ -234,7 +209,7 @@ const Experience: React.FC = () => {
                       {exp.technologies.map((tech, i) => (
                         <span
                           key={i}
-                          className="px-4 py-2 rounded-xl text-sm font-medium shadow-md bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+                          className="px-4 py-2 rounded-xl text-xs font-medium shadow-sm bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800"
                         >
                           {tech}
                         </span>
@@ -248,8 +223,8 @@ const Experience: React.FC = () => {
 
           {/* End Marker */}
           <div data-aos="fade-up" className="flex justify-center">
-            <div className="bg-gradient-to-r from-primary-500 to-purple-600 text-white px-8 py-4 rounded-full shadow-xl font-bold text-lg">
-              🚀 Journey Continues...
+            <div className="bg-gradient-to-r from-purple-500 to-teal-600 text-white px-8 py-4 rounded-full shadow-xl font-bold text-lg">
+              ✨ Achieving Design Excellence
             </div>
           </div>
         </div>
@@ -258,4 +233,4 @@ const Experience: React.FC = () => {
   );
 };
 
-export default Experience;
+export default UIUX_Experience;
