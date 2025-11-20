@@ -7,7 +7,6 @@ import {
   Send,
   CheckCircle,
   AlertCircle,
-  Github,
   Linkedin,
 } from "lucide-react";
 
