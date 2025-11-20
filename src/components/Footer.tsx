@@ -1,14 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Heart,
-  ArrowUp,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Linkedin, Mail, Heart, ArrowUp, Phone, MapPin } from "lucide-react";
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {

@@ -6,12 +6,8 @@ import {
   Layers, // For Prototyping/Wireframing
   Palette, // For Visual Design/Aesthetics
   Trello, // For Project Management/Jira
-  Figma, // For Figma Tool
-  Code, // For Dev Collaboration/Basic HTML/CSS
   Smartphone, // For Mobile/Responsive Design
   Zap, // For Micro-Interactions/Motion UI
-  Gauge, // For A/B Testing/UX Audits
-  ClipboardList, // For User Flows/IA
   Component, // For Design Systems
 } from "lucide-react";
 

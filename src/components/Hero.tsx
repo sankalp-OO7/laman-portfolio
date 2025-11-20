@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, Variants, useMotionValue } from "framer-motion";
 import {
-  Github,
   Linkedin,
   Mail,
   Download,
