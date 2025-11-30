@@ -110,8 +110,8 @@ const UIUX_About = () => {
             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic">
               "Passionate and results-driven UI/UX Designer with 1.5 years of
               experience in crafting intuitive and visually engaging digital
-              experiences. [cite_start]Proven ability to translate user insights
-              into elegant and accessible designs that drive user satisfaction"
+              experiences. Proven ability to translate user insights into
+              elegant and accessible designs that drive user satisfaction"
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
               My expertise spans the full design lifecycle, from initial user
